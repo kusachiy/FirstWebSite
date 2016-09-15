@@ -1,20 +1,64 @@
 @import "bootstrap/bootstrap.less";
 @import "variables.less";
 
+html{height:100%; }
+
+
 body {
 	border-top: 5px solid #130061;
-
+	border-bottom: 5px solid #130061;
+	
+	
 	header {
-			height: 60px;
+			height: 65px;				
             background-color : @myhbc;
 			color: #333;			
-			border-color: #ddd;
+			border-color: #ddd;			
 		}
 	
 	.wrapper {
 		padding: 0 0 50px 0;
-		background-color : @mysbc;
-
-		
+		background-color : @mysbc;		
 	}
+	
+	footer {
+  	background: #7e7e7e;
+  	color: #dbdbdb;
+  	font-size: 11px;
+	vertical-align: bottom;
+	}
+	
+	
+	
+	.big-container
+	{
+		margin-left:50px;
+		margin-right:50px;
+		
+	
+	}
+	
+	
+	.left-sidebar
+	{    
+		margin-top:10px;
+		
+		background-size: 100% 100%;
+		background-repeat: no-repeat;		
+		background-image: url('../images/patch.jpg');
+		background-color: @myhbc;
+		height:200px;
+		border: 2px solid black;
+	}	
+	
+	
+	.content{
+		height:700px;
+		border-right: 2px solid black;
+	}	
+	
+	.left-sidebar,.content{
+		border-left:2px solid black;		
+	}
+	
 }
