@@ -9,7 +9,7 @@
 			</div>
 	</header>	
 	
-	<div class="wrapper container" >		
+	<div class="wrapper container" action = "query_registration.php" method = "post">		
 		<h2 class = "text-center">Registration:</h2>		
 		<div class="row">
 			<div>
@@ -85,7 +85,7 @@
 				  <br />
 				  <div class="form-group">
 					<div class="col-xs-offset-3 col-xs-9">
-					  <input type="submit" formaction = "query_registration.php" class="btn btn-primary" value="Submit">
+					  <input type="submit" class="btn btn-primary" value="Submit">
 					  <input type="reset" class="btn btn-default" value="Reset">
 					</div>
 				  </div>
