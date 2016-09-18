@@ -2,58 +2,46 @@
 <?php include_once("includes/header.php"); ?>
 
 <html>	
-	<body>	
-	<header> 
-	<a href="/"><img src="images\logo2.png" alt="logo" class="col-sm-5" height = "60px";></a>
-			<div class = "col-sm-19"  			
-			</div>
-	</header>	
-	
-	<div class="wrapper container" action = "query_registration.php" method = "post">		
+	<body>		
+	<div class="wrapper container" >		
 		<h2 class = "text-center">Registration:</h2>		
 		<div class="row">
 			<div>
-				<form class="form-horizontal col-sm-offset-7 col-sm-20">		
-				  <div class="form-group">
+				<form class="form-horizontal col-sm-offset-7 col-sm-20" action = "query_registration.php" method = "post">
+				
+				  <div class="form-group">			  
 					<label class="control-label col-xs-3" for="lastName">Last Name:</label>
 					<div class="col-xs-9">
-					  <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+					  <input type="text" class="form-control" name="last_name" id="lastName" placeholder="Last Name">
 					</div>
 				  </div>
-				  <div class="form-group">	
-				  <label class="control-label col-xs-3" for="firstName">First Name:</label>
+				  
+				  
+				  <div class="form-group">			  
+					<label class="control-label col-xs-3" for="lastName">First Name:</label>
 					<div class="col-xs-9">
-					  <input type="text" class="form-control" id="firstName" placeholder="First Name">
+					  <input type="text" class="form-control" name="first_name" id="firstName" placeholder="First Name">
 					</div>
-				  </div>		  
+				  </div>			  
+				  
+						  
 				  <div class="form-group">
-					<label class="control-label col-xs-3">Date of Birth:</label>
-					<div class="col-xs-3">
-					  <select class="form-control">
-						<option>Date</option>
-					  </select>
-					</div>
-					<div class="col-xs-3">
-					  <select class="form-control">
-						<option>Month</option>
-					  </select>
-					</div>
-					<div class="col-xs-3">
-					  <select class="form-control">
-						<option>Year</option>
-					  </select>
-					</div>
+					<label class="control-label col-xs-3">Date of Birth:</label>					
+					<div class="col-xs-9">
+					 <input type="date" class="form-control" name="birthday" >
+					</div>				  
 				  </div>
+				  
 				  <div class="form-group">
 					<label class="control-label col-xs-3" for="inputEmail">Email:</label>
 					<div class="col-xs-9">
-					  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+					  <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
 					</div>
 				  </div>
 				  <div class="form-group">
 					<label class="control-label col-xs-3" for="inputPassword">Password:</label>
 					<div class="col-xs-9">
-					  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+					  <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
 					</div>
 				  </div>
 				  <div class="form-group">
@@ -62,7 +50,7 @@
 					 <input type="password" class="form-control" id="confirmPassword" placeholder="ConfirmPassword">
 					</div>
 				  </div>
-				<div class="form-group">
+					<div class="form-group">
 					<label class="control-label col-xs-3">GenderRadios:</label>
 					<div class="col-xs-2">
 					  <label class="radio-inline">

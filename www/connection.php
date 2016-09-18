@@ -3,10 +3,10 @@
 $host = "mysql.hostinger.ru";
 $user = "u115702597_main";
 $password = "baza01";
-$db = "u261927365_tech" ;
+$db = "u115702597_main";
 
-$connection = mysqli_connect($host, $user, $password) or die("Error");
-$select_bd = mysqli_select_db($connection, $db) or die ("Error");
+$connection = mysqli_connect($host, $user, $password) or die("Error connection");
+$select_bd = mysqli_select_db($connection,$db) or die ("Error connection to db");
  
 
 ?>

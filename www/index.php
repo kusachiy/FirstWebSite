@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<?php include_once("includes/header.php"); ?>
+	<?php if($_SESSION['status']=="login")
+	{
+		header("location: /profile.php");
+	}
+		?>
 	<style>
 	body
-	{
-		background-position: 0px 60px;
+	{		
 		background-size: 100% 100%;		
 		background-repeat: no-repeat;
 		background-image: url('images/main_background.jpg');
@@ -18,35 +22,30 @@
 	}
 	</style>	
 	
-	<body>
-		<header>	
-			<a href="/"><img src="images\logo2.png" alt="logo" class="col-sm-5 col-sm-offset " height = "60px";></a>
-		</header>
-		
+	<body>		
 		
 		<div class="big-container">		
 			<div class="row - fluid">
 				<aside class="left-sidebar col-md-6">
-					 <form role="form text-center .">
+					 <form role="form text-center" action = "query_login.php" method = "post">
 						 <div class="form-group ">
 							  <label for="email">Email</label>
-							  <input type="email" class="form-control " id="email" placeholder="Email">					  
+							  <input type="email" class="form-control " id="email" name="login" placeholder="Email">					  
 						 </div>
 						 <div class="form-group">
 							  <label for="pass">Password</label>
-							  <input type="password" class="form-control" id="pass" placeholder="Password">
+							  <input type="password" class="form-control" id="pass" name = "pass" placeholder="Password">
 						 </div>
 						 <div class="checkbox">
-							<label><input type="checkbox"> Checkbox</label>
+							<label><input type="checkbox" name = "check"> Remember Me</label>
 						 </div>
 						 
 						 
-						<button type="submit" formaction = "query_login.php" class="btn btn-success col-md-6">Log In</button>						
+						<button type="submit" class="btn btn-success col-md-6">Log In</button>						
 						<button formaction = "registration.php" class="btn colorbutton">Registration</button>
 						
 					</form>
-				</aside>			
-				
+				</aside>				
 				
 				<section class="content col-md-18">			
 					<div class="jumbotron jumbotron-fluid text-center">						
@@ -57,14 +56,8 @@
 					</div>			
 				</section>
 			</div>
-		</div>
-		
-		
+		</div>	
 	
-		
-		
-		
-		
 		
 	<footer>
 		<div class="container">

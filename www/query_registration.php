@@ -1,9 +1,9 @@
 <?php
 
 include_once "includes/header.php";
-$query = "insert into users values(0,'".$_Post['login']."','".$_Post['password']."','".$_Post['last_name']."','".$_Post['first_name']."','".$_Post['birthday']."','".$_Post['foto']."','".$_Post['email']."') ";
+$query = "insert into users values(0,'".$_POST['email']."','".$_POST['password']."','".$_POST['last_name']."','".$_POST['first_name']."','".$_POST['birthday']."','".$_POST['foto']."') ";
 
-$result = mysqli_query($query,$connection) or die("Error registration");
+$result = mysqli_query($connection,$query) or die("Error registration");
+echo $query;
 
-$echo query
 ?>
