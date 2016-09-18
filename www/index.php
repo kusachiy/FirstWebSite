@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
-	<?php include_once("includes/header.php"); ?>
-	<?php if($_SESSION['status']=="login")
+<html>	
+	<?php
+	include_once("includes/header.php"); 
+	
+	if($_SESSION['status']=="login")	
 	{
-		header("location: /profile.php");
-	}
-		?>
+		/*header("location: /profile.php");*/
+		echo "<br><a href='profile.php?id=$user_id'>Мой профиль</a>";		
+	}?>	
 	<style>
 	body
 	{		

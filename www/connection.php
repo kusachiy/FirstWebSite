@@ -7,6 +7,10 @@ $db = "u115702597_main";
 
 $connection = mysqli_connect($host, $user, $password) or die("Error connection");
 $select_bd = mysqli_select_db($connection,$db) or die ("Error connection to db");
+
+$login = $_SESSION['email'];
+$status = $_SESSION['status'];
+$user_id = $_SESSION['id'];
  
 
 ?>

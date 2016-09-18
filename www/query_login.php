@@ -15,6 +15,7 @@ $_SESSION['first_name'] = $user['first_name'];
 $_SESSION['last_name'] = $user['last_name'];
 $_SESSION['birthday'] = $user['birthday'];
 $_SESSION['email'] = $user['email'];
+$_SESSION['login'] = $user['email'];
 $_SESSION['foto'] = $user['foto'];
 $_SESSION['status'] = 'login';
 header("location: /");
